@@ -132,6 +132,7 @@ header span:hover{
     justify-content: center;
     align-items: center;
     /* visibility: hidden; */
+    z-index: 5;
 }
 #start-message{
     width: 400px;
@@ -194,6 +195,8 @@ header span:hover{
      justify-content: center;
      align-items: center;
      display: none;
+    z-index: 5;
+
 }
 #win-message{
     width: 400px;
@@ -241,6 +244,8 @@ header span:hover{
      justify-content: center;
      align-items: center;
      display: none;
+    z-index: 5;
+
 }
 #third-message{
     width: 400px;
@@ -290,6 +295,7 @@ header span:hover{
      justify-content: center;
      align-items: center;
      display: none;
+    z-index: 5;
 }
 #fourth-message{
     width: 400px;
@@ -325,4 +331,23 @@ header span:hover{
 }
 #fourth-message button:hover{
     box-shadow: 0 0 10px rgba(0, 213, 255, 0.884);
+}
+
+
+
+/* media queres */
+ 
+@media screen and (max-width:472px){
+    #board{
+        transform: scale(0.7);
+    }
+    #score{
+        width: 300px;
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width:354px){
+    #board{
+        transform: scale(0.6);
+    }
 }
