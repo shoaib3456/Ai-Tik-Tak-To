@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+:root{
+    --board-border:2px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(1,0,14);
+}
+header{
+    width: 100%;
+    height: 40px;
+    color: white;
+    font-size: 2.5rem;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header span{
+    cursor: pointer;
+    transition: 1s;
+    height: 200%;
+    text-shadow: 0 0 10px rgb(55, 141, 152) ,0 0 20px rgb(66,55,152),0 0 20px rgb(66,55,152);
+}
+header span:hover{
+    transform: rotate(30deg);
+}
+#user-name{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+}
+/* board css */
+#board{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:2vw;
+}
+.box{
+    width: 166.66px;
+    height: 166.66px;
+    border-color: rgb(0, 50, 78);
+    border-style: solid;
+    box-sizing:border-box;
+    font-size: 0rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   transition: .4s cubic-bezier(0.68, 0.55, 0.265, 1.55);
+   
+}
+#box-1{
+    border-width: 0 var(--board-border) var(--board-border) 0;
+}
+#box-2{
+    border-width: 0 var(--board-border) var(--board-border) var(--board-border);
+}
+#box-3{
+    border-width: 0 0 var(--board-border) var(--board-border);
+}
+#box-3{
+    border-width: 0 0 var(--board-border) var(--board-border);
+}
+#box-4{
+    border-width: var(--board-border) var(--board-border) var(--board-border) 0;
+}
+#box-5{
+    border-width: var(--board-border) var(--board-border) var(--board-border) var(--board-border);
+}
+#box-6{
+    border-width: var(--board-border) 0 var(--board-border) var(--board-border);
+}
+#box-7{
+    border-width: var(--board-border) var(--board-border) 0 0;
+}
+#box-8{
+    border-width: var(--board-border) var(--board-border) 0 var(--board-border);
+}
+#box-9{
+    border-width: var(--board-border) 0 0 var(--board-border);
+}
+/* score div */
+#score{
+    width: 500px;
+    justify-content: space-evenly;
+    display: flex;
+    color: white;
+    font-size: 1.75rem;
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px 5px 5px 5px ;
+}
+#win,
+#lose,
+#Tie{
+    display: flex;
+}
+/* footer  */
+#footer{
+    color: rgba(255, 255, 255, 0.575);
+    font-family: 'Montserrat', sans-serif;
+    margin: 30px 20px ;
+}
+#footer a{
+    color: rgba(255, 255, 255, 0.575);
+}
+
+
+/* first layer */
+#first-layer{
+    position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.507);
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    /* visibility: hidden; */
+}
+#start-message{
+    width: 400px;
+    height: 205px;
+    background-color: rgb(1,0,14);
+    border: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(24, 145, 169, 0.616);
+    border: 2px solid rgb(24,144,169);
+    border-radius: 20px;
+    padding:10px;
+}
+#start-message span{
+    color: white;
+    text-shadow: 0 0 10px rgb(182,37,145) ,0 0 20px rgb(255, 0, 128),0 0 120px rgba(255, 0, 221, 0.445);
+    font-size: 2.75rem;
+}
+#start-message input{
+    font-size: 1.5rem;
+    margin: 10px 0 4px 0;
+    padding:6px 17px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(24, 145, 169, 0.301);
+    border: 2px solid rgba(24, 145, 169, 0.842);
+    background-color: transparent;
+    color: white;
+}
+#enter-name-alert{
+    color: rgb(255, 0, 128);
+    padding-bottom: 3px;
+    margin-left: -45%;
+    visibility: hidden;
+}
+#start-message button{
+    background-color: rgb(14, 172, 204);
+    font-size: 1.2rem;
+    padding: 7px 20px;
+    color: rgb(1,0,14);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .4s;
+}
+#start-message button:hover{
+    box-shadow: 0 0 10px rgba(0, 213, 255, 0.884);
+}
+
+/* second wibn layer */
+#second-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.507);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     display: none;
+}
+#win-message{
+    width: 400px;
+    height: 150px;
+    background-color: rgb(1,0,14);
+    border: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(24, 145, 169, 0.616);
+    border: 2px solid rgb(24,144,169);
+    border-radius: 20px;
+    padding:20px;
+}
+#win-message span{
+    color: white;
+    text-shadow: 0 0 10px rgb(182,37,145) ,0 0 20px rgb(255, 0, 128),0 0 120px rgba(255, 0, 221, 0.445);
+    font-size: 2.75rem;
+}
+#win-message button{
+    background-color: rgb(1,0,14);
+    box-shadow: 0 0 10px rgba(24, 145, 169, 0.616);
+    border: 2px solid rgb(11, 124, 177);
+    font-size: 1.2rem;
+    padding: 7px 50px;
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .4s;
+    box-sizing: content-box;
+    margin-top: 10px;
+}
+#win-message button:hover{
+    box-shadow: 0 0 10px rgba(0, 213, 255, 0.884);
+}
+#third-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.507);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     display: none;
+}
+#third-message{
+    width: 400px;
+    height: 150px;
+    background-color: rgb(1,0,14);
+    border: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(24, 145, 169, 0.616);
+    border: 2px solid rgb(24,144,169);
+    border-radius: 20px;
+    padding:20px;
+}
+#third-message span{
+    color: white;
+    text-shadow: 0 0 10px rgb(182,37,145) ,0 0 20px rgb(255, 0, 128),0 0 120px rgba(255, 0, 221, 0.445);
+    font-size: 2.75rem;
+}
+#third-message button{
+    background-color: rgb(1,0,14);
+    box-shadow: 0 0 10px rgba(24, 145, 169, 0.616);
+    border: 2px solid rgb(11, 124, 177);
+    font-size: 1.2rem;
+    padding: 7px 50px;
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .4s;
+    box-sizing: content-box;
+    margin-top: 10px;
+}
+#third-message button:hover{
+    box-shadow: 0 0 10px rgba(0, 213, 255, 0.884);
+}
+
+
+#fourth-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.507);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     display: none;
+}
+#fourth-message{
+    width: 400px;
+    height: 150px;
+    background-color: rgb(1,0,14);
+    border: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(24, 145, 169, 0.616);
+    border: 2px solid rgb(24,144,169);
+    border-radius: 20px;
+    padding:20px;
+}
+#fourth-message span{
+    color: white;
+    text-shadow: 0 0 10px rgb(182,37,145) ,0 0 20px rgb(255, 0, 128),0 0 120px rgba(255, 0, 221, 0.445);
+    font-size: 2.75rem;
+}
+#fourth-message button{
+    background-color: rgb(1,0,14);
+    box-shadow: 0 0 10px rgba(24, 145, 169, 0.616);
+    border: 2px solid rgb(11, 124, 177);
+    font-size: 1.2rem;
+    padding: 7px 50px;
+    color: rgb(255, 255, 255);
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .4s;
+    box-sizing: content-box;
+    margin-top: 10px;
+}
+#fourth-message button:hover{
+    box-shadow: 0 0 10px rgba(0, 213, 255, 0.884);
+}

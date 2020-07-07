@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b690895109.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- start game -->
+    <div id="first-layer">
+        <div id="start-message">
+            <span>Tik Tak Toe</span>
+            <input type="text" placeholder="Enter Your name" id="name-input" maxlength="20">
+            <div id="enter-name-alert">Enter Your name !</div>
+            <button onclick="start_game()">Start Game</button>
+        </div>
+    </div>
+    <!-- game win -->
+    <div id="second-layer">
+        <div id="win-message">
+            <span>You Win <i class="fa fa-trophy" aria-hidden="true"></i></span>
+            <button onclick="close_win_layer()">Ok</button>
+        </div>
+    </div>
+    <div id="third-layer">
+        <div id="win-message">
+            <span>You Lose <i class="fa fa-frown-o" aria-hidden="true"></i></span>
+            <button onclick="close_lose_layer()">Ok</button>
+        </div>
+    </div>
+    <div id="fourth-layer">
+        <div id="win-message">
+            <span>Game Tie !</span>
+            <button onclick="close_tie_layer()">Ok</button>
+        </div>
+    </div>
+
+    <header><span title="Reset Game" onclick="reset_game()">⟳</span> <div id="user-name"></div></header>
+    <div id="board">
+        <div id="box-1" class="box"  ></div>
+        <div id="box-2" class="box"  ></div>
+        <div id="box-3" class="box"  ></div>
+        <div id="box-4" class="box"  ></div>
+        <div id="box-5" class="box"  ></div>
+        <div id="box-6" class="box"  ></div>
+        <div id="box-7" class="box"  ></div>
+        <div id="box-8" class="box"  ></div>
+        <div id="box-9" class="box"  ></div>
+    </div>
+    <div id="score">
+    <div id="win">Win&nbsp;<div id="win_score_value">0</div></div>
+    <div id="lose">Lose&nbsp;<div id="lose_score_value">0</div></div>
+    <div id="Tie">Tie&nbsp;<div id="tie_score_value">0</div></div>
+    </div>
+    <div id="footer">
+        Game Created By Shoaib Siddqui <a href="https://github.com/shoaib3456/Ai-Tik-Tak-Toe" target="_blank">Github Link</a>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
